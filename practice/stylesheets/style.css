@@ -1,0 +1,64 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.navbarcontainer {
+  background-color: #551A8B;
+  box-shadow: 0px 0px 5px 2.5px rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.navbarholder {
+  flex-direction: row;
+  display: flex;
+}
+
+.navtext {
+  color: rgba(255,255,255,0.8);
+  margin-left: auto;
+  padding: 15px;
+}
+
+#home {
+  margin-left: 10px;
+}
+
+#contact {
+ margin-left: 10px; 
+}
+
+.navbar {
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbarcontainer {
+    align-items: flex-start;
+    flex-flow: column nowrap;
+  }
+  .navbarholder{
+    flex-direction: column;
+  }
+  .navtext, .navbar {
+    margin-left: 10px;
+  }
+  .navtext {
+    margin-right: 0;
+    margin-top: 10px;
+    padding: 10px; 
+  }
+  .navbar {
+    padding: 10px;
+  }
+  #contact {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,42 @@
+header {
+  background-color: lightblue;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 50px;
+}
+
+body {
+  height: 200vh;
+  position: relative;
+}
+
+.name {
+  width: 180px;
+  height: 100px;
+  border: 1px solid black;
+  position: absolute;
+  top: 200px;
+  left: 400px;
+}
+
+.name p {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.image1 img{
+  max-width: 25%;
+  max-height: 25%;
+}
+
+button {
+  transition: 0.5s all;
+}
+
+button:hover {
+  background-color: purple;
+}
