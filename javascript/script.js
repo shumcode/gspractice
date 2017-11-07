@@ -312,20 +312,55 @@
 
 
 
-function collect() {
-  var inputs = document.querySelectorAll("input");
-  var userObj = {
-    name: inputs[0].value,
-    email: inputs[1].value,
-    address: inputs[2].value,
-    city: inputs[3].value,
-    state: inputs[4].value
-  };
-  for (var i = 0; i < inputs.length; i++) {
-    inputs[i].value = "";
-  }
-  console.log(userObj);
-}
+// function collect() {
+//   var inputs = document.querySelectorAll("input");
+//   var userObj = {
+//     name: inputs[0].value,
+//     email: inputs[1].value,
+//     address: inputs[2].value,
+//     city: inputs[3].value,
+//     state: inputs[4].value
+//   };
+//   for (var i = 0; i < inputs.length; i++) {
+//     inputs[i].value = "";
+//   }
+//   console.log(userObj); 
+// }
+
+
+$(document).ready(function() {
+  $("li")
+    .css("min-width", "200px")
+    .css("min-height", "50px")
+    .css("border-radius", "5px");
+  $("li").mouseenter(function() {
+    $(this).fadeTo(500, 0.25);
+  });
+  $("li").mouseleave(function() {
+    $(this).fadeTo(500, 1);
+  });
+  $("li").dblclick(function () {
+    $(this).css("background-color", "red");
+    $("<div>Ultra Clicked!</div>").appendTo(this).fadeOut(2000);
+  });
+  $("li").click(function () {
+    $(this).css("background-color", "red");
+    $("<div>clicked!</div>").appendTo(this).fadeOut(2000);
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
