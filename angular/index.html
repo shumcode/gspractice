@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="testModule" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <title>Angular Practice</title>
+</head>
+<body>
+
+  <!-- <p> {{ 50 | currency }} </p> -->
+ 
+  <div ng-controller="TestController as test">
+
+    <form action="">
+      <input type="text" placeholder="username" ng-model="username">
+      <p ng-show="username">Your username is invalid.</p>
+    </form>
+    <button ng-click="test.lunchTime()">Update Time</button>
+    {{ test.dayOfWeek }}
+
+    <input type="text" ng-model="showElement">
+    <p ng-show="showElement">Ayy ng-show demo</p>
+
+    <input type="text" ng-model="hideElement">
+    <p ng-hide="hideElement">Ayy ng-show demo</p>
+
+    <!-- <p> {{ test.myObj | json }} </p> -->
+    
+    <input type="text" ng-model="musicFilter">
+    <ul>
+      <li ng-repeat="music in test.favMusic | filter: musicFilter track by $index">  {{ music | uppercase }} <a ng-click="test.removeMusic($index)" href="">X</a> </li>
+    </ul>
+
+    <input type="text" ng-model="familyPerson">
+    <ul>
+      <li ng-repeat="member in test.familyMembers | filter: familyPerson track by $index"> {{ member.name }} {{ member.relation | uppercase }} <a ng-click="test.removeFamily($index)" href="">X</a> </li>
+    </ul>
+  </div>
+
+  <input type="text" placeholder="Item Price" ng-model="itemPrice">
+  <input type="text" placeholder="Sales Tax Percentage" ng-model="salesTax">
+
+  <p>Price of Item: ${{ itemPrice }}</p>
+  <p>Sales Tax: ${{ (salesTax * .01) }}</p>
+  <p>Tax on item: ${{ itemPrice * (salesTax * .01) }}</p>
+
+
+
+
+
+
+  <!-- <p>I am a {{ noun }}.  I like to eat {{ adjective }} waffles.  Would you like to try some?</p> -->
+
+
+
+  <!-- <p> {{ human.name.first }} </p>
+  <p> {{ human.name.last }} </p>
+
+  <p> {{ (10 * 5) * (0.06) }} </p>
+  
+  <p ng-init="mood='happy'"> Today we are learning AngularJS! I am {{ mood + "!" }} </p>
+
+  <span>
+    true || false : {{ true || false}}
+    <br>
+    false || false : {{ false || false }}
+    <br>
+    true && false : {{ true && false }}
+    <br>
+    !true : {{ !true }}
+  </span> -->
+
+  <script src="lib/angular.min.js"></script>
+  <script src="scripts/module.js"></script>
+  <script src="scripts/controller.js"></script>
+</body>
+</html>
