@@ -19,7 +19,7 @@
         })
         .when("/display", {
           template: `
-          <p>That's a nice {{ display.wordInfo.adjective }}  {{ display.wordInfo.noun }} you got there.  Can I have it?  It's almost as good as my {{ display.wordInfo.adjective2 }} {{ display.wordInfo.noun2 }}, but I still want your {{ display.wordInfo.noun }}.  Would you trade me a/an  {{ display.wordInfo.adjective3 }} {{ display.wordInfo.noun3 }} for it? If not, you're a {{ display.wordInfo.noun4 }}.</p>
+          <p>That's a nice {{ display.wordInfo.adjective }}  {{ display.wordInfo.noun }} you got there.  Can I have it?  It's almost as good as my {{ display.wordInfo.adjective2 }} {{ display.wordInfo.noun2 }}, but I still want your {{ display.wordInfo.noun }}.  Can I trade you a/an  {{ display.wordInfo.adjective3 }} {{ display.wordInfo.noun3 }} for it? If not, you're a/an {{ display.wordInfo.noun4 }}.</p>
           `,
           controller: "DisplayController as display"
         });
