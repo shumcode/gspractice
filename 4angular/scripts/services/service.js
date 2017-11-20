@@ -16,7 +16,6 @@
     return {
       setName: setName,
       getName: getName,
-      makeRequest: makeRequest,
       returnRequest: returnRequest
     };
 
