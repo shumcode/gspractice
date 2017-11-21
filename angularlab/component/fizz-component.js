@@ -1,11 +1,11 @@
 (function () {
   var fizzComponent = {
-    controller: "FizzController",
+    controller: "FizzController as fizz",
     template: `
     <div class="fizzcontainer">
-      <input ng-model="$ctrl.fizzNumber" placeholder="Enter a number to fizz">
-      <button ng-click="$ctrl.runFizz($ctrl.fizzNumber)">Run Fizz</button>
-      <li ng-repeat="number in $ctrl.numbers track by $index">{{ number }}</li>
+      <input ng-model="fizz.fizzNumber" placeholder="Enter a number to fizz">
+      <button ng-click="fizz.runFizz(fizz.fizzNumber)">Run Fizz</button>
+      <li ng-repeat="number in fizz.returnNumbers(); track by $index">{{ number }}</li>
     </div>
     `
   };

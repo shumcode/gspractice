@@ -1,16 +1,19 @@
 (function () {
-  function FizzController() {
+  function FizzController(FizzService) {
     var vm = this;
-    vm.numbers = [];
-
-    vm.runFizz = function (FizzService) {
-      FizzService.fizzIt();
-      console.log(FizzService);
+    var numberDisplay = null;
+    vm.runFizz = function (fizzNumber) {
+      FizzService.fizzIt(fizzNumber);
+      numberDisplay = fizzNumber;
+      console.log(numberDisplay);
+    }
+    vm.returnNumbers = function () {
+      console.log(FizzService.fizzNumber);
+      return FizzService.fizzNumber;
     }
   }
   function WeatherController () {
     var vm = this;
-
   }
   function AboutController () {
     var vm = this;
